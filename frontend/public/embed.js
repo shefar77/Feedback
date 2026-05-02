@@ -4,7 +4,7 @@
   const biz      = encodeURIComponent(currentScript?.getAttribute('data-biz') ?? 'My Business');
   const category = currentScript?.getAttribute('data-category') ?? 'retail';
   const lang     = currentScript?.getAttribute('data-lang') ?? 'en';
-  const appUrl   = currentScript?.getAttribute('data-app-url') ?? 'https://feedbackflow.vercel.app';
+  const appUrl   = currentScript?.getAttribute('data-app-url') ?? 'https://feedback-portal-gules-kappa.vercel.app/';
 
   const btn = document.createElement('button');
   btn.textContent = '★ Give Feedback';
