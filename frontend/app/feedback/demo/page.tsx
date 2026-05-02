@@ -1,0 +1,22 @@
+import { Suspense } from 'react';
+import FeedbackFlow from '../../../components/Feedback';
+
+interface Props {
+  params: { placeId: string };
+  searchParams: { biz?: string; category?: string; lang?: string };
+}
+
+export default function FeedbackPage({ params, searchParams }: Props) {
+  const context = {
+    placeId: params?.placeId || 'demo',
+    bizName: searchParams.biz ?? 'Rambaug Palace',
+    category: searchParams.category ?? 'cafe',
+    lang: searchParams.lang ?? 'en',
+  };
+
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading…</div>}>
+      <FeedbackFlow context={context} />
+    </Suspense>
+  );
+}
