@@ -53,7 +53,7 @@ export default function FeedbackFlow({ context }: Props) {
     const payload = {
       rating,
       context: {
-        placeId: context?.placeId || 'demo', // ✅ FORCE FIX
+        placeId: context?.placeId || 'demo', 
         bizName: context?.bizName || 'Rambaug Palace',
         category: context?.category || 'cafe',
         lang: context?.lang || 'en',
@@ -61,7 +61,7 @@ export default function FeedbackFlow({ context }: Props) {
       text: editedText,
     };
 
-    console.log("FINAL PAYLOAD:", payload); // 👈 DEBUG
+    console.log("FINAL PAYLOAD:", payload); 
 
     const res = await submitFeedback(payload);
 

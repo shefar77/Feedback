@@ -12,9 +12,6 @@ export default function Home() {
         >
           Give Feedback Demo
         </Link>
-        <p className="mt-4 text-sm text-[var(--text-3)]">
-          Replace the path with your Google Place ID
-        </p>
       </div>
     </main>
   );
